@@ -3,10 +3,8 @@ public class FlashCard {
     private String question;
     private String answer;
 
-    public FlashCard(long ID, String question, String answer) {
+    public FlashCard(long ID) {
         this.ID = ID;
-        this.question = question;
-        this.answer = answer;
     }
 
     public long getID() {
