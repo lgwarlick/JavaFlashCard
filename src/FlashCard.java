@@ -1,18 +1,8 @@
 public class FlashCard {
-    private long ID;
+
     private String question;
     private String answer;
-
-    public FlashCard(long ID) {
-        this.ID = ID;
-    }
-
-    public long getID() {
-        return ID;
-    }
-
-    public void setID(long ID) {
-        this.ID = ID;
+    public FlashCard() {
     }
 
     public String getQuestion() {
@@ -30,4 +20,15 @@ public class FlashCard {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    /**
+     * Check's the user's answer against the one provided to the flashcard
+     * Not case sensitive
+     * @param givenAnswer is the user's answer
+     * @return boolean check
+     */
+    public boolean checkAnswer(String givenAnswer) {
+        return (givenAnswer.equalsIgnoreCase(getAnswer()));
+    }
+
 }
